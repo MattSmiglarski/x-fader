@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<script type="text/javascript" src="x-fade.js"></script>
+<style>
+body { margin: 0; }
+
+.cf {
+border: solid 1px black;
+}
+
+.cf img {
+  position:absolute;
+  -webkit-transition: opacity 1s ease-in;
+opacity: 0;
+}
+
+@keyframes cf3FadeInOut {
+0% { opacity:0; }
+45% { opacity:0; }
+55% { opacity:1; }
+100% { opacity:1; }
+}
+
+.cf img.top {
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 4s;
+-webkit-animation-direction: alternate;
+opacity: 1;
+}
+</style>
+	</head>
+	<body>
+
+<script type="text/javascript">
+var p = {
+delay: 3000
+};
+slideshow1(["image1.jpg", "image2.jpg"], p);
+</script>
+	</body>
+</html>
