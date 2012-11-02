@@ -3,7 +3,7 @@ function setClass(el, classAttribute) { el.className = classAttribute;}
 function slideshow1(elArray, p) {
 
     var elWrapper;
-    var i=0, j, currentWidth =0, currentHeight = 0;;
+    var i=0, j, currentWidth =0, currentHeight = 0;
     var tempImage;
 
     var loop = function() {
@@ -20,7 +20,8 @@ function slideshow1(elArray, p) {
 	elWrapper.width = 0;
 	elWrapper.height = 0;
 	setClass(elWrapper, "cf");
-	document.body.appendChild(elWrapper);
+	console.log(p.target);
+	(p.target || document.body).appendChild(elWrapper);
 
 	function elementReady(el) {
 	    currentWidth = Math.max(currentWidth, el.width);
