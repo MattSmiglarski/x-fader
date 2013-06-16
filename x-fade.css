@@ -1,0 +1,25 @@
+.cf {
+    position: relative;
+}
+
+.cf img {
+    position:absolute;
+    -webkit-transition: opacity 1000ms ease-in;
+    opacity: 0;
+}
+
+@keyframes cf3FadeInOut {
+    0% { opacity:0; }
+    45% { opacity:0; }
+    55% { opacity:1; }
+    100% { opacity:1; }
+}
+
+.cf img.top {
+    -webkit-animation-name: cf3FadeInOut;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-direction: alternate;
+    opacity: 1;
+}

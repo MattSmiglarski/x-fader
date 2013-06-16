@@ -2,51 +2,22 @@
 <html>
 	<head>
 <script type="text/javascript" src="x-fade.js"></script>
-<style>
-body { margin: 0; }
-
-.cf {
-border: solid 1px black;
-position: relative;
-}
-
-.cf img {
-  position:absolute;
-  -webkit-transition: opacity 1s ease-in;
-opacity: 0;
-}
-
-@keyframes cf3FadeInOut {
-0% { opacity:0; }
-45% { opacity:0; }
-55% { opacity:1; }
-100% { opacity:1; }
-}
-
-.cf img.top {
--webkit-animation-name: cf3FadeInOut;
--webkit-animation-timing-function: ease-out;
--webkit-animation-iteration-count: infinite;
--webkit-animation-duration: 8s;
--webkit-animation-direction: alternate;
-opacity: 1;
-}
-</style>
+<link href="x-fade.css" rel="stylesheet"/>
 	</head>
 	<body>
-<h3>Slideshow Example</h3>
-Content before
-<div id="target">&nbsp;</div>
-Content after
-<div>
-Block level content after
 
-<script type="text/javascript">
-var p = {
-delay: 6000,
-target: document.getElementById("target")
-};
-slideshow1(["image1.jpg", "image2.jpg", "image3.jpg"], p);
+<h3>Example</h3>
+<script>
+var sample_images = [
+"http://farm9.staticflickr.com/8140/8705874267_4ee38c9411_q.jpg",
+"http://upload.wikimedia.org/wikipedia/en/thumb/0/09/Mary_Simmons_of_Hartwell%27s_prize-winning_Aylesbury_ducks.jpg/100px-Mary_Simmons_of_Hartwell%27s_prize-winning_Aylesbury_ducks.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Electric_steam_iron.jpg/250px-Electric_steam_iron.jpg"
+];
+
+slideshow(sample_images, {
+target: document.getElementById("target-configured"),
+delay: 4000
+});
 </script>
 	</body>
 </html>
